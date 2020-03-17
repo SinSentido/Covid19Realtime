@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MARGINS -->
+    <dimen name="main_margin">8dp</dimen>
+    <dimen name="main_margin_x2">16dp</dimen>
+    <dimen name="main_margin_x3">24dp</dimen>
+    <dimen name="main_margin_x4">32dp</dimen>
+    <dimen name="main_margin_x5">40dp</dimen>
+
+    <!-- FONTS -->
+    <dimen name="title_font_size">32sp</dimen>
+    <dimen name="subtitle_font_size">24sp</dimen>
+    <dimen name="number_font_size">18sp</dimen>
+
+
+</resources>
