@@ -6,23 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/dashboard_img_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_world_64"
         android:contentDescription="@string/dashboard_title"
+        android:src="@drawable/ic_world_64"
+        android:paddingTop="@dimen/main_margin_x5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/dashboard_lbl_title"
@@ -30,6 +23,7 @@
         android:layout_height="wrap_content"
         android:text="@string/dashboard_title"
         android:layout_marginTop="@dimen/main_margin_x2"
+        android:paddingBottom="@dimen/main_margin_x3"
         android:textSize="@dimen/title_font_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

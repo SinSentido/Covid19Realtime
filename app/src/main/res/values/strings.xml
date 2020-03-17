@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Covid19Realtime</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--MENU-->
+    <string name="mnu_countries">Affected countries</string>
 
     <!--DASHBOARD-->
     <string name="dashboard_title">All cases</string>
@@ -12,4 +12,10 @@
 
     <!--COUNTRIES-->
     <string name="countries_title">Affected countries</string>
+    <string name="countries_look_for">Write the name of a country</string>
+    <!--COUNTRIES ITEM-->
+    <string name="countries_item_img_description">Country flag</string>
+    <string name="countries_item_cases">Total cases: $d</string>
+    <string name="countries_item_recovered">Recovered: $d</string>
+    <string name="countries_item_deaths">Deaths: %d</string>
 </resources>
