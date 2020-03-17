@@ -15,7 +15,7 @@
     <string name="countries_look_for">Write the name of a country</string>
     <!--COUNTRIES ITEM-->
     <string name="countries_item_img_description">Country flag</string>
-    <string name="countries_item_cases">Total cases: $d</string>
-    <string name="countries_item_recovered">Recovered: $d</string>
+    <string name="countries_item_cases">Total cases: %d</string>
+    <string name="countries_item_recovered">Recovered: %d</string>
     <string name="countries_item_deaths">Deaths: %d</string>
 </resources>

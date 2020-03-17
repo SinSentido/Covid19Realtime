@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dashboard_lbl_title" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/dashboard_cases"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/number_font_size"
@@ -59,10 +59,10 @@
         android:textSize="@dimen/subtitle_font_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_cases" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/dashboard_recovered"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/number_font_size"
@@ -80,10 +80,10 @@
         android:textSize="@dimen/subtitle_font_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_recovered" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/dashboard_deaths"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/number_font_size"

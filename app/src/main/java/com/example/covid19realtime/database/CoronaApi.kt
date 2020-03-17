@@ -7,9 +7,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 class CoronaApi {
 
     companion object{
-        val coronaClient: Retrofit = Retrofit.Builder()
+        private val retrofit: Retrofit = Retrofit.Builder()
             .baseUrl("https://corona.lmao.ninja/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
+
+        val coronaApiService: CoronaApiService = retrofit.create(CoronaApiService::class.java)
     }
 }

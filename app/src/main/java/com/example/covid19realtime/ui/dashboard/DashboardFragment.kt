@@ -4,11 +4,9 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupWithNavController
 
 import com.example.covid19realtime.R
 import com.example.covid19realtime.database.CoronaApi
@@ -22,7 +20,7 @@ class DashboardFragment : Fragment(R.layout.dashboard_fragment) {
     }
 
     private val viewModel: DashboardViewModel by viewModels {
-        DashboardViewModelFactory(CoronaApi.coronaClient)
+        DashboardViewModelFactory(CoronaApi.coronaApiService)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -32,6 +30,7 @@ class DashboardFragment : Fragment(R.layout.dashboard_fragment) {
 
     private fun setupViews(view: View) {
         setupToolbar()
+        setGlobalStatistics()
     }
 
     private fun setupToolbar() {
@@ -42,6 +41,16 @@ class DashboardFragment : Fragment(R.layout.dashboard_fragment) {
                 R.id.mnu_countries -> {navController.navigate(R.id.countriesDestination)}
             }
             true
+        }
+    }
+
+    private fun setGlobalStatistics(){
+        viewModel.getGlobalStatistics().observe(viewLifecycleOwner){
+             if(it != null){
+                 dashboard_cases.text = it.cases.toString()
+                 dashboard_recovered.text = it.recovered.toString()
+                 dashboard_deaths.text = it.deaths.toString()
+             }
         }
     }
 
