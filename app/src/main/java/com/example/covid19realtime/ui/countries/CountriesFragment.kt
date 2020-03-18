@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.navigation.NavController
@@ -43,6 +44,15 @@ class CountriesFragment : Fragment(R.layout.countries_fragment), CountriesAdapte
         loadData()
         setupToolbar()
         setupRecyclerView()
+        setupSearchBar()
+    }
+
+    private fun setupSearchBar() {
+        countries_search.addTextChangedListener{ filterList(countries_search.text.toString()) }
+    }
+
+    private fun filterList(countryName: String) {
+        listAdapter.submitData(viewModel.filterCountries(countryName))
     }
 
     private fun setupToolbar() {
@@ -58,7 +68,8 @@ class CountriesFragment : Fragment(R.layout.countries_fragment), CountriesAdapte
     }
 
     private fun loadData(){
-        viewModel.getAllCountries().observe(viewLifecycleOwner){
+        viewModel.getAllCountries()
+        viewModel.countriesObserve.observe(viewLifecycleOwner){
             listAdapter.submitData(it)
         }
     }

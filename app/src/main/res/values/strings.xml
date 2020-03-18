@@ -16,6 +16,7 @@
     <!--COUNTRIES-->
     <string name="countries_title">Affected countries</string>
     <string name="countries_look_for">Write the name of a country</string>
+    <string name="search_hint">Write a country</string>
     <!--COUNTRIES ITEM-->
     <string name="countries_item_img_description">Country flag</string>
     <string name="countries_item_cases">Total cases: %d</string>
@@ -31,4 +32,5 @@
     <string name="country_lbl_today_deaths">Today deaths:</string>
     <string name="country_lbl_critical">Critical state:</string>
     <string name="country_img_description">Country flag</string>
+
 </resources>

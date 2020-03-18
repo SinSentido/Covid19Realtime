@@ -9,13 +9,18 @@ import kotlin.concurrent.thread
 
 class CountriesViewModel(private val coronaApiService: CoronaApiService): ViewModel() {
 
-    fun getAllCountries(): LiveData<List<Country>> {
-        var countries: MutableLiveData<List<Country>> = MutableLiveData()
+    private var countries: MutableLiveData<List<Country>> = MutableLiveData()
+    val countriesObserve: LiveData<List<Country>> get() = countries
 
+    fun getAllCountries() {
         thread {
             countries.postValue(coronaApiService.getAllCountries().execute().body())
         }
+    }
 
-        return countries;
+    fun filterCountries(countryName: String): List<Country>{
+        return countries.value!!.filter {
+            it.country.toLowerCase().matches((".*" + countryName.toLowerCase() +".*").toRegex())
+        }
     }
 }
