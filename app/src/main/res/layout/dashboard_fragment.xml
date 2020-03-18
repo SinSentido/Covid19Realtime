@@ -92,4 +92,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dashboard_lbl_deaths" />
 
+    <Button
+        android:id="@+id/dashboard_btn_countries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mnu_countries"
+        android:layout_marginTop="@dimen/main_margin_x5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_deaths" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

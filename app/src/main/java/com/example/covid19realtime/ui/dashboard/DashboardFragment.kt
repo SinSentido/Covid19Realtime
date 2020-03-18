@@ -34,6 +34,7 @@ class DashboardFragment : Fragment(R.layout.dashboard_fragment) {
     }
 
     private fun setupToolbar() {
+        dashboard_btn_countries.setOnClickListener { navController.navigate(R.id.countriesDestination) }
         requireActivity().toolbar.menu.clear()
         requireActivity().toolbar.inflateMenu(R.menu.main_menu)
         requireActivity().toolbar.setOnMenuItemClickListener{

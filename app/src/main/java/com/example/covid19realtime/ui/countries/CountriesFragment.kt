@@ -20,6 +20,7 @@ import com.example.covid19realtime.database.CoronaApi
 import com.example.covid19realtime.pojos.Country
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.countries_fragment.*
+import kotlinx.android.synthetic.main.dashboard_fragment.*
 
 class CountriesFragment : Fragment(R.layout.countries_fragment), CountriesAdapter.OnItemClickListener {
 

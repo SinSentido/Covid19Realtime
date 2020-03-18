@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Covid19Realtime</string>
+    <string name="app_name">Covid-19 Realtime</string>
 
     <!--ARGUMENTS-->
     <string name="country_name_argument">NAME</string>
