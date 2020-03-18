@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Covid19Realtime</string>
 
+    <!--ARGUMENTS-->
+    <string name="country_name_argument">NAME</string>
+
     <!--MENU-->
     <string name="mnu_countries">Affected countries</string>
 
@@ -18,4 +21,14 @@
     <string name="countries_item_cases">Total cases: %d</string>
     <string name="countries_item_recovered">Recovered: %d</string>
     <string name="countries_item_deaths">Deaths: %d</string>
+
+    <!--COUNTRY-->
+    <string name="country_title">Country statistics</string>
+    <string name="country_lbl_cases">Cases:</string>
+    <string name="country_lbl_today_cases">Today cases:</string>
+    <string name="country_lbl_recovered">Total recovered:</string>
+    <string name="country_lbl_deaths">Deaths:</string>
+    <string name="country_lbl_today_deaths">Today deaths:</string>
+    <string name="country_lbl_critical">Critical state:</string>
+    <string name="country_img_description">Country flag</string>
 </resources>

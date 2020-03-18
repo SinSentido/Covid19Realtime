@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.navigation.NavController
@@ -15,17 +16,21 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.example.covid19realtime.R
 import com.example.covid19realtime.database.CoronaApi
+import com.example.covid19realtime.pojos.Country
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.countries_fragment.*
 
-class CountriesFragment : Fragment(R.layout.countries_fragment) {
+class CountriesFragment : Fragment(R.layout.countries_fragment), CountriesAdapter.OnItemClickListener {
 
     private val navController: NavController by lazy {
         findNavController()
     }
 
-    private val listAdapter: CountriesAdapter = CountriesAdapter()
+    private val listAdapter: CountriesAdapter = CountriesAdapter().also {
+        it.setOnItemClickListener(this)
+    }
 
-    val viewModel: CountriesViewModel by viewModels {
+    private val viewModel: CountriesViewModel by viewModels {
         CountriesViewModelFactory(CoronaApi.coronaApiService)
     }
 
@@ -36,7 +41,12 @@ class CountriesFragment : Fragment(R.layout.countries_fragment) {
 
     private fun setupViews() {
         loadData()
+        setupToolbar()
         setupRecyclerView()
+    }
+
+    private fun setupToolbar() {
+        requireActivity().toolbar.menu.clear()
     }
 
     private fun setupRecyclerView() {
@@ -51,6 +61,10 @@ class CountriesFragment : Fragment(R.layout.countries_fragment) {
         viewModel.getAllCountries().observe(viewLifecycleOwner){
             listAdapter.submitData(it)
         }
+    }
+
+    override fun onClick(country: Country) {
+        navController.navigate(R.id.countryDestination, bundleOf(getString(R.string.country_name_argument) to country.country))
     }
 
 }

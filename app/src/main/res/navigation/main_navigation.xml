@@ -14,5 +14,18 @@
         android:id="@+id/countriesDestination"
         android:name="com.example.covid19realtime.ui.countries.CountriesFragment"
         android:label="@string/countries_title"
-        tools:layout="@layout/countries_fragment" />
+        tools:layout="@layout/countries_fragment" >
+        <action
+            android:id="@+id/action_countriesDestination_to_countryFragment"
+            app:destination="@id/countryDestination" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryDestination"
+        android:name="com.example.covid19realtime.ui.country.CountryFragment"
+        android:label="@string/country_title">
+        <argument
+            android:name="NAME"
+            android:defaultValue='""'
+            app:argType="string" />
+    </fragment>
 </navigation>

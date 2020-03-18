@@ -11,7 +11,7 @@
     <!-- FONTS -->
     <dimen name="title_font_size">32sp</dimen>
     <dimen name="subtitle_font_size">24sp</dimen>
-    <dimen name="number_font_size">18sp</dimen>
+    <dimen name="number_font_size">20sp</dimen>
 
 
 </resources>

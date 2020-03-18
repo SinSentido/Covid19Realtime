@@ -1,6 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.country.CountryFragment"/>
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+        <ImageView
+            android:id="@+id/country_img_title"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:paddingTop="@dimen/main_margin_x5"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/country_img_description"/>
+
+        <TextView
+            android:id="@+id/country_lbl_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/title_font_size"
+            android:layout_marginTop="@dimen/main_margin_x3"
+            android:paddingBottom="@dimen/main_margin_x2"
+            tools:text="Spain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_img_title" />
+
+        <TextView
+            android:id="@+id/country_lbl_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country_lbl_cases"
+            android:textSize="@dimen/subtitle_font_size"
+            android:layout_marginTop="@dimen/main_margin_x5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_lbl_name" />
+
+        <TextView
+            android:id="@+id/country_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/number_font_size"
+            tools:text="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_lbl_cases" />
+
+        <TextView
+            android:id="@+id/country_lbl_today_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country_lbl_today_cases"
+            android:textSize="@dimen/subtitle_font_size"
+            android:layout_marginTop="@dimen/main_margin_x5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_cases" />
+
+        <TextView
+            android:id="@+id/country_today_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/number_font_size"
+            tools:text="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_lbl_today_cases" />
+
+        <TextView
+            android:id="@+id/country_lbl_recovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country_lbl_recovered"
+            android:textSize="@dimen/subtitle_font_size"
+            android:layout_marginTop="@dimen/main_margin_x5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_today_cases" />
+
+        <TextView
+            android:id="@+id/country_recovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/number_font_size"
+            tools:text="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_lbl_recovered" />
+
+        <TextView
+            android:id="@+id/country_lbl_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country_lbl_deaths"
+            android:textSize="@dimen/subtitle_font_size"
+            android:layout_marginTop="@dimen/main_margin_x5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_recovered" />
+
+        <TextView
+            android:id="@+id/country_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/number_font_size"
+            tools:text="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_lbl_deaths" />
+
+        <TextView
+            android:id="@+id/country_lbl_today_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country_lbl_today_deaths"
+            android:textSize="@dimen/subtitle_font_size"
+            android:layout_marginTop="@dimen/main_margin_x5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_deaths" />
+
+        <TextView
+            android:id="@+id/country_today_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/number_font_size"
+            tools:text="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_lbl_today_deaths" />
+
+        <TextView
+            android:id="@+id/country_lbl_critical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/country_lbl_critical"
+            android:textSize="@dimen/subtitle_font_size"
+            android:layout_marginTop="@dimen/main_margin_x5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_today_deaths" />
+
+        <TextView
+            android:id="@+id/country_critical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/number_font_size"
+            tools:text="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_lbl_critical" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
