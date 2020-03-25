@@ -1,105 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/dashboard_img_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/dashboard_title"
-        android:src="@drawable/ic_world_64"
-        android:paddingTop="@dimen/main_margin_x5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/dashboard_lbl_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dashboard_title"
-        android:layout_marginTop="@dimen/main_margin_x2"
-        android:paddingBottom="@dimen/main_margin_x3"
-        android:textSize="@dimen/title_font_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dashboard_img_title" />
+        <ImageView
+            android:id="@+id/dashboard_img_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/dashboard_title"
+            android:src="@drawable/ic_world_64"
+            android:paddingTop="@dimen/main_margin_x5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/dashboard_lbl_cases"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dashboard_all_cases"
-        android:layout_marginTop="@dimen/main_margin_x5"
-        android:textSize="@dimen/subtitle_font_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dashboard_lbl_title" />
+        <TextView
+            android:id="@+id/dashboard_lbl_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_title"
+            android:layout_marginTop="@dimen/main_margin_x2"
+            android:paddingBottom="@dimen/main_margin_x3"
+            android:textSize="@dimen/title_font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_img_title" />
 
-    <TextView
-        android:id="@+id/dashboard_cases"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/number_font_size"
-        tools:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dashboard_lbl_cases" />
+        <TextView
+            android:id="@+id/dashboard_lbl_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_all_cases"
+            android:layout_marginTop="@dimen/main_margin_x5"
+            android:textSize="@dimen/subtitle_font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_lbl_title" />
 
-    <TextView
-        android:id="@+id/dashboard_lbl_recovered"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dashboard_all_recovered"
-        android:layout_marginTop="@dimen/main_margin_x5"
-        android:textSize="@dimen/subtitle_font_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dashboard_cases" />
+        <TextView
+            android:id="@+id/dashboard_cases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/number_font_size"
+            tools:text="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_lbl_cases" />
 
-    <TextView
-        android:id="@+id/dashboard_recovered"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/number_font_size"
-        tools:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dashboard_lbl_recovered" />
+        <TextView
+            android:id="@+id/dashboard_lbl_recovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_all_recovered"
+            android:layout_marginTop="@dimen/main_margin_x5"
+            android:textSize="@dimen/subtitle_font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_cases" />
 
-    <TextView
-        android:id="@+id/dashboard_lbl_deaths"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dashboard_all_deaths"
-        android:layout_marginTop="@dimen/main_margin_x5"
-        android:textSize="@dimen/subtitle_font_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dashboard_recovered" />
+        <TextView
+            android:id="@+id/dashboard_recovered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/number_font_size"
+            tools:text="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_lbl_recovered" />
 
-    <TextView
-        android:id="@+id/dashboard_deaths"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/number_font_size"
-        tools:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dashboard_lbl_deaths" />
+        <TextView
+            android:id="@+id/dashboard_lbl_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard_all_deaths"
+            android:layout_marginTop="@dimen/main_margin_x5"
+            android:textSize="@dimen/subtitle_font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_recovered" />
 
-    <Button
-        android:id="@+id/dashboard_btn_countries"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mnu_countries"
-        android:layout_marginTop="@dimen/main_margin_x5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dashboard_deaths" />
+        <TextView
+            android:id="@+id/dashboard_deaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/number_font_size"
+            tools:text="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_lbl_deaths" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/dashboard_btn_countries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mnu_countries"
+            android:layout_marginTop="@dimen/main_margin_x5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dashboard_deaths" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
